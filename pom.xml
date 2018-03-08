@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>evolansantesonarrules</name>
 	<packaging>sonar-plugin</packaging>
-	<description>Java Custom Rules Example for SonarQube</description>
+	<description>Java Custom Rules Example for SonarQube.</description>
 	<inceptionYear>2016</inceptionYear>
 
 	<properties>
