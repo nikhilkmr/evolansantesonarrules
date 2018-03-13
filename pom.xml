@@ -1,5 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<repositories>
+		<repository>
+			<id>maven-Alfresco</id>
+			<name>Alfresco Public Repository</name>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+		</repository>
+	</repositories>
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.soprasteria.evolansante.sonar</groupId>
 	<artifactId>evolansantesonarrules</artifactId>
@@ -184,6 +193,16 @@
 									<groupId>org.springframework</groupId>
 									<artifactId>spring-context</artifactId>
 									<version>4.3.3.RELEASE</version>
+								</artifactItem>
+<!-- 								<artifactItem> -->
+									<!-- <groupId>com.oracle.java</groupId> -->
+									<!-- <artifactId>jre</artifactId> -->
+									<!-- <version>1.7.0_76</version> -->
+<!-- 								</artifactItem> -->
+								<artifactItem>
+									<groupId>struts</groupId>
+									<artifactId>struts</artifactId>
+									<version>1.2.8</version>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/test-jars</outputDirectory>
