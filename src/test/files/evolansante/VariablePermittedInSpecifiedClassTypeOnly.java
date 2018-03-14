@@ -1,19 +1,10 @@
 package com.sopasteria.sonar.evolansante.java.rules;
-
-import java.lang.String;
-import java.util.List;
-
-import org.apache.commons.io.IOCase;
-
-
-
+import org.apache.struts.action.ActionForm;
 
 public class VariablePermittedInSpecifiedClassTypeOnly  {
     
     
-    String io;
-    List l;
-    IOCase ko;
+    ActionForm f;
     
     
     public void myMethod()
