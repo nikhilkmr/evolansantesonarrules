@@ -121,6 +121,8 @@
 			<version>0.9.30</version>
 			<scope>test</scope>
 		</dependency>
+		
+
 	</dependencies>
 
 	<build>
@@ -174,36 +176,36 @@
 									<artifactId>javaee-api</artifactId>
 									<version>6.0</version>
 								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-webmvc</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-webmvc</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-web</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-context</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-<!-- 								<artifactItem> -->
-									<!-- <groupId>com.oracle.java</groupId> -->
-									<!-- <artifactId>jre</artifactId> -->
-									<!-- <version>1.7.0_76</version> -->
-<!-- 								</artifactItem> -->
-								<artifactItem>
-									<groupId>struts</groupId>
-									<artifactId>struts</artifactId>
-									<version>1.2.8</version>
-								</artifactItem>
+								<!-- <artifactItem> -->
+								<!-- <groupId>org.springframework</groupId> -->
+								<!-- <artifactId>spring-webmvc</artifactId> -->
+								<!-- <version>4.3.3.RELEASE</version> -->
+								<!-- </artifactItem> -->
+								<!-- <artifactItem> -->
+								<!-- <groupId>org.springframework</groupId> -->
+								<!-- <artifactId>spring-webmvc</artifactId> -->
+								<!-- <version>4.3.3.RELEASE</version> -->
+								<!-- </artifactItem> -->
+								<!-- <artifactItem> -->
+								<!-- <groupId>org.springframework</groupId> -->
+								<!-- <artifactId>spring-web</artifactId> -->
+								<!-- <version>4.3.3.RELEASE</version> -->
+								<!-- </artifactItem> -->
+								<!-- <artifactItem> -->
+								<!-- <groupId>org.springframework</groupId> -->
+								<!-- <artifactId>spring-context</artifactId> -->
+								<!-- <version>4.3.3.RELEASE</version> -->
+								<!-- </artifactItem> -->
+								<!-- <artifactItem> -->
+								<!-- <groupId>com.oracle.java</groupId> -->
+								<!-- <artifactId>jre</artifactId> -->
+								<!-- <version>1.7.0_76</version> -->
+								<!-- </artifactItem> -->
+								<!-- <artifactItem> -->
+								<!-- <groupId>struts</groupId> -->
+								<!-- <artifactId>struts</artifactId> -->
+								<!-- <version>1.2.8</version> -->
+								<!-- </artifactItem> -->
 							</artifactItems>
 							<outputDirectory>${project.build.directory}/test-jars</outputDirectory>
 						</configuration>

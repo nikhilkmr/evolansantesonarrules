@@ -36,6 +36,7 @@ public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor i
     public void visitVariable(VariableTree tree) {
 	//if(tree.)
 	super.visitVariable(tree);
+	System.out.println(tree);
     }
     
     
