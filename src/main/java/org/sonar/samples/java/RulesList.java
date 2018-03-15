@@ -19,17 +19,12 @@
  */
 package org.sonar.samples.java;
 
-import com.google.common.collect.ImmutableList;
 import java.util.List;
+
 import org.sonar.plugins.java.api.JavaCheck;
-import org.sonar.samples.java.checks.AvoidAnnotationRule;
-import org.sonar.samples.java.checks.AvoidBrandInMethodNamesRule;
-import org.sonar.samples.java.checks.AvoidMethodDeclarationRule;
-import org.sonar.samples.java.checks.AvoidSuperClassRule;
-import org.sonar.samples.java.checks.AvoidUnmodifiableListRule;
-import org.sonar.samples.java.checks.MyCustomSubscriptionRule;
-import org.sonar.samples.java.checks.SecurityAnnotationMandatoryRule;
-import org.sonar.samples.java.checks.SpringControllerRequestMappingEntityRule;
+
+import com.google.common.collect.ImmutableList;
+import com.sopasteria.sonar.evolansante.java.rules.VariablePermittedInSpecifiedClassTypeOnly;
 
 public final class RulesList {
 
@@ -42,14 +37,15 @@ public final class RulesList {
 
   public static List<Class<? extends JavaCheck>> getJavaChecks() {
     return ImmutableList.<Class<? extends JavaCheck>>builder()
-      .add(SpringControllerRequestMappingEntityRule.class)
-      .add(AvoidAnnotationRule.class)
-      .add(AvoidBrandInMethodNamesRule.class)
-      .add(AvoidMethodDeclarationRule.class)
-      .add(AvoidSuperClassRule.class)
-      .add(AvoidUnmodifiableListRule.class)
-      .add(MyCustomSubscriptionRule.class)
-      .add(SecurityAnnotationMandatoryRule.class)
+                //      .add(SpringControllerRequestMappingEntityRule.class)
+                //      .add(AvoidAnnotationRule.class)
+                //      .add(AvoidBrandInMethodNamesRule.class)
+                //      .add(AvoidMethodDeclarationRule.class)
+                //      .add(AvoidSuperClassRule.class)
+                //      .add(AvoidUnmodifiableListRule.class)
+                //      .add(MyCustomSubscriptionRule.class)
+                //      .add(SecurityAnnotationMandatoryRule.class)
+                .add(VariablePermittedInSpecifiedClassTypeOnly.class)
       .build();
   }
 

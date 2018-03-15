@@ -9,10 +9,10 @@ import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 
 @Rule(key = "AvoidMethodToCall")
-public class AvoidMethodToCall extends BaseTreeVisitor implements
-	JavaFileScanner { 
+public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanner
+{
 
-    private static final String DEFAULT_VALUE_CLASS = "ArrayList";
+    private static final String DEFAULT_VALUE_CLASS  = "ArrayList";
     private static final String DEFAULT_VALUE_METHOD = "remove";
 
     private JavaFileScannerContext context;
@@ -24,22 +24,23 @@ public class AvoidMethodToCall extends BaseTreeVisitor implements
     protected String methodName;
 
     @Override
-    public void scanFile(JavaFileScannerContext context) {
-	this.context = context;
+    public void scanFile(JavaFileScannerContext context)
+    {
+        this.context = context;
 
-	scan(context.getTree());
+        scan(context.getTree());
     }
 
     @Override
-    public void visitMethodInvocation(MethodInvocationTree tree) {
-	super.visitMethodInvocation(tree);
-	MethodMatcher methodToAvoid = MethodMatcher.create()
-		.typeDefinition(className).name(methodName).withAnyParameters();
+    public void visitMethodInvocation(MethodInvocationTree tree)
+    {
+        super.visitMethodInvocation(tree);
+        MethodMatcher methodToAvoid = MethodMatcher.create().typeDefinition(className).name(methodName).withAnyParameters();
 
-	if (methodToAvoid.matches(tree)) {
-	    context.reportIssue(this, tree, "Avoid using "
-		    + DEFAULT_VALUE_METHOD + " of " + DEFAULT_VALUE_CLASS);
+        if (methodToAvoid.matches(tree))
+        {
+            context.reportIssue(this, tree, "Avoid using " + DEFAULT_VALUE_METHOD + " of " + DEFAULT_VALUE_CLASS);
 
-	}
+        }
     }
 }

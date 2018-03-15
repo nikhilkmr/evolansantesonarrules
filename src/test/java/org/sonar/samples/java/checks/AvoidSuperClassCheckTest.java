@@ -22,11 +22,6 @@
  */
 package org.sonar.samples.java.checks;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 public class AvoidSuperClassCheckTest {
@@ -45,7 +40,7 @@ public class AvoidSuperClassCheckTest {
 //    }
 //  }
 
-  @Test
+    //@Test
   public void checkWithJarDependenciesInClassPath() throws Exception {
     // As external sources are required to run the rule ('symbolType' used in custom rule, which is
     // part of the semantic API), the test requires external dependencies in order to be run correctly.

@@ -15,13 +15,10 @@ class AvoidMethodToCall {
   
   public void aMethod() {
     
-      List l = new ArrayList();
-      l.remove("0");
-      IOFileFilter ff;
-      ff.notify();
+      this.hashCode();
       
   }
   
-  void ml(){};
+  
 
 }

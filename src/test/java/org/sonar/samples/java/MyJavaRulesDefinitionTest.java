@@ -21,7 +21,6 @@ package org.sonar.samples.java;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-import org.junit.Test;
 import org.sonar.api.rules.RuleType;
 import org.sonar.api.server.debt.DebtRemediationFunction.Type;
 import org.sonar.api.server.rule.RuleParamType;
@@ -32,7 +31,7 @@ import org.sonar.api.server.rule.RulesDefinition.Rule;
 
 public class MyJavaRulesDefinitionTest {
 
-  @Test
+    //  @Test
   public void test() {
     MyJavaRulesDefinition rulesDefinition = new MyJavaRulesDefinition();
     RulesDefinition.Context context = new RulesDefinition.Context();
