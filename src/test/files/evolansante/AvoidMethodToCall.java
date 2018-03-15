@@ -1,7 +1,4 @@
-import java.util.List;
 import java.util.ArrayList;
-
-import org.apache.commons.io.filefilter.IOFileFilter;
 
 
 /**
@@ -15,7 +12,9 @@ class AvoidMethodToCall {
   
   public void aMethod() {
     
-      this.hashCode();
+      ArrayList list = new ArrayList();
+      list.remove(0); // Noncompliant
+      
       
   }
   

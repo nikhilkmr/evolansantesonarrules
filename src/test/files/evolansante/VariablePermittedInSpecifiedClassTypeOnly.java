@@ -1,13 +1,12 @@
 package com.sopasteria.sonar.evolansante.java.rules;
 import java.lang.String;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 
-public class VariablePermittedInSpecifiedClassTypeOnly extends Action {
+public class VariablePermittedInSpecifiedClassTypeOnly  {
     
     
-    ActionForm str;
+    ActionForm str; // Noncompliant
      
 
 }

@@ -12,7 +12,7 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanner
 {
 
-    private static final String DEFAULT_VALUE_CLASS  = "ArrayList";
+    private static final String DEFAULT_VALUE_CLASS  = "java.util.ArrayList";
     private static final String DEFAULT_VALUE_METHOD = "remove";
 
     private JavaFileScannerContext context;
