@@ -15,14 +15,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>evolansantesonarrules</name>
 	<packaging>sonar-plugin</packaging>
-	<description>Java Custom Rules Example for SonarQube.</description>
+	<description>Java Custom Rules for EvolanSante.</description>
 	<inceptionYear>2016</inceptionYear>
 
 	<properties>
 		<sslr.version>1.21</sslr.version>
 		<gson.version>2.6.2</gson.version>
-		<sonar.version>6.7</sonar.version>
-		<sonarjava.version>5.1.0.13090</sonarjava.version>
+<!-- 		<sonar.version>6.7</sonar.version> -->
+<!-- 		<sonarjava.version>5.1.0.13090</sonarjava.version> -->
+			<sonar.version>7.0</sonar.version>
+		<sonarjava.version>5.1.1.13214</sonarjava.version>
 	</properties>
 
 	<dependencies>
