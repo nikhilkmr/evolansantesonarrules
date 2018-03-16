@@ -35,12 +35,15 @@ import org.sonar.plugins.java.api.tree.Tree;
 @Rule(key = "AvoidSuperClass")
 public class AvoidSuperClassRule extends IssuableSubscriptionVisitor {
 
-  public static final List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.slf4j.Logger");
+  public static final List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.apache.struts.action.ActionForm");
+//  public static final List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.slf4j.Logger");
+  //org.apache.struts.action.Action
+  
 
   @Override
   public List<Tree.Kind> nodesToVisit() {
     // Register to the kind of nodes you want to be called upon visit.
-    return ImmutableList.of(Tree.Kind.CLASS);
+    return ImmutableList.of(Tree.Kind.VARIABLE);
   }
 
   @Override

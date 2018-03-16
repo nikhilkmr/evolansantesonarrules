@@ -1,18 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>maven-Alfresco</id> -->
+<!-- 			<name>Alfresco Public Repository</name> -->
+<!-- 			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.soprasteria.evolansante.sonar</groupId>
 	<artifactId>evolansantesonarrules</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>evolansantesonarrules</name>
 	<packaging>sonar-plugin</packaging>
-	<description>Java Custom Rules Example for SonarQube</description>
+	<description>Java Custom Rules Example for SonarQube.</description>
 	<inceptionYear>2016</inceptionYear>
 
 	<properties>
 		<sslr.version>1.21</sslr.version>
 		<gson.version>2.6.2</gson.version>
-
 		<sonar.version>6.7</sonar.version>
 		<sonarjava.version>5.1.0.13090</sonarjava.version>
 	</properties>
@@ -112,86 +120,105 @@
 			<version>0.9.30</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts</artifactId>
+			<version>1.2.8</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
-				<artifactId>sonar-packaging-maven-plugin</artifactId>
-				<version>1.17</version>
-				<extensions>true</extensions>
-				<configuration>
-					<pluginKey>java-custom</pluginKey>
-					<pluginName>Java Custom Rules</pluginName>
-					<pluginClass>org.sonar.samples.java.MyJavaRulesPlugin</pluginClass>
-					<sonarLintSupported>true</sonarLintSupported>
-					<sonarQubeMinVersion>6.7</sonarQubeMinVersion>
-				</configuration>
-			</plugin>
+<!-- 		<pluginManagement> -->
+			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+					<artifactId>sonar-packaging-maven-plugin</artifactId>
+					<version>1.17</version>
+					<extensions>true</extensions>
+					<configuration>
+						<pluginKey>java-custom</pluginKey>
+						<pluginName>Java Custom Rules</pluginName>
+						<pluginClass>org.sonar.samples.java.MyJavaRulesPlugin</pluginClass>
+						<sonarLintSupported>true</sonarLintSupported>
+						<sonarQubeMinVersion>6.7</sonarQubeMinVersion>
+					</configuration>
+				</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.0</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
 
-			<!-- only required to run UT - these are UT dependencies -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.10</version>
-				<executions>
-					<execution>
-						<id>copy</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.apache.commons</groupId>
-									<artifactId>commons-collections4</artifactId>
-									<version>4.0</version>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>javax</groupId>
-									<artifactId>javaee-api</artifactId>
-									<version>6.0</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-webmvc</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-webmvc</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-web</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.springframework</groupId>
-									<artifactId>spring-context</artifactId>
-									<version>4.3.3.RELEASE</version>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${project.build.directory}/test-jars</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+				<!-- only required to run UT - these are UT dependencies -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.10</version>
+					<executions>
+						<execution>
+							<id>copy</id>
+							<phase>test-compile</phase>
+							<goals>
+								<goal>copy</goal>
+							</goals>
+							<configuration>
+								<artifactItems>
+									<artifactItem>
+										<groupId>org.apache.commons</groupId>
+										<artifactId>commons-collections4</artifactId>
+										<version>4.0</version>
+										<type>jar</type>
+									</artifactItem>
+									<artifactItem>
+										<groupId>javax</groupId>
+										<artifactId>javaee-api</artifactId>
+										<version>6.0</version>
+									</artifactItem>
+									<!-- <artifactItem> -->
+									<!-- <groupId>org.springframework</groupId> -->
+									<!-- <artifactId>spring-webmvc</artifactId> -->
+									<!-- <version>4.3.3.RELEASE</version> -->
+									<!-- </artifactItem> -->
+									<!-- <artifactItem> -->
+									<!-- <groupId>org.springframework</groupId> -->
+									<!-- <artifactId>spring-webmvc</artifactId> -->
+									<!-- <version>4.3.3.RELEASE</version> -->
+									<!-- </artifactItem> -->
+									<!-- <artifactItem> -->
+									<!-- <groupId>org.springframework</groupId> -->
+									<!-- <artifactId>spring-web</artifactId> -->
+									<!-- <version>4.3.3.RELEASE</version> -->
+									<!-- </artifactItem> -->
+									<!-- <artifactItem> -->
+									<!-- <groupId>org.springframework</groupId> -->
+									<!-- <artifactId>spring-context</artifactId> -->
+									<!-- <version>4.3.3.RELEASE</version> -->
+									<!-- </artifactItem> -->
+									<!-- <artifactItem> -->
+									<!-- <groupId>com.oracle.java</groupId> -->
+									<!-- <artifactId>jre</artifactId> -->
+									<!-- <version>1.7.0_76</version> -->
+									<!-- </artifactItem> -->
+									<artifactItem>
+										<groupId>struts</groupId>
+										<artifactId>struts</artifactId>
+										<version>1.2.8</version>
+									</artifactItem>
+								</artifactItems>
+								<outputDirectory>${project.build.directory}/test-jars</outputDirectory>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+<!-- 		</pluginManagement> -->
 	</build>
 
 
