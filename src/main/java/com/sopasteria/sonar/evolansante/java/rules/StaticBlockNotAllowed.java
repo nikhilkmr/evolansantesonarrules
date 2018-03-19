@@ -10,7 +10,7 @@ import org.sonar.plugins.java.api.tree.Tree;
 
 import com.google.common.collect.ImmutableList;
 
-@Rule(key = "StaticBlockNotAllowed", name = "Use of static block is prohibited.", description = "Oh! boy, dont you know that use of static block is prohibited in this project.if you are not sure how to avoid it then, talk to the smart guy of your team.", priority = Priority.CRITICAL, tags = {
+@Rule(key = "StaticBlockNotAllowed", name = "Use of static block is prohibited.", description = "O! Man, don't you know that use of static block is prohibited in this project. If you are not sure how to avoid it then, talk to your team.", priority = Priority.CRITICAL, tags = {
 "bug" })
 public class StaticBlockNotAllowed extends IssuableSubscriptionVisitor {
     
@@ -24,7 +24,7 @@ public class StaticBlockNotAllowed extends IssuableSubscriptionVisitor {
     public void visitNode(Tree tree) {
 	StaticInitializerTree staticInitializerTree = (StaticInitializerTree) tree;
 	
-	reportIssue(tree, "Oh! boy, don't you know that use of static block is prohibited in this project. If you are not sure how to avoid it then, talk to the smart guy of your team.");
+	reportIssue(tree, "O! Man, don't you know that use of static block is prohibited in this project. If you are not sure how to avoid it then, talk to your team.");
 
     }
 }

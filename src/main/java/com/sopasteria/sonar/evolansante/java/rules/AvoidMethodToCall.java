@@ -42,7 +42,7 @@ public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanne
 
         if (methodToAvoid.matches(tree))
         {
-            context.reportIssue(this, tree, "Avoid using " + DEFAULT_VALUE_METHOD + " of " + DEFAULT_VALUE_CLASS);
+            context.reportIssue(this, tree, "Arrrr... " + DEFAULT_VALUE_METHOD + " of " + DEFAULT_VALUE_CLASS +" is strictly not allowed to use.");
 
         }
     }

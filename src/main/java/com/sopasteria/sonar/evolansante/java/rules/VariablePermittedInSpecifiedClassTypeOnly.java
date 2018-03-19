@@ -44,7 +44,7 @@ public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor i
             ClassTree enclosedClass = tree.symbol().enclosingClass().declaration();
             if (!enclosedClass.symbol().superClass().isSubtypeOf(DEFAULT_VALUE_ENCLOSED_CLASS))
             {
-                context.reportIssue(this, tree, "Use of " + DEFAULT_VALUE_VARIABLE_CLASS + " is not allowed here, its allowed in " + DEFAULT_VALUE_ENCLOSED_CLASS + " only.");
+                context.reportIssue(this, tree, "I am so sorry man but, " + DEFAULT_VALUE_VARIABLE_CLASS + " is not allowed here, its allowed in " + DEFAULT_VALUE_ENCLOSED_CLASS + " only.");
             }
 
         }
