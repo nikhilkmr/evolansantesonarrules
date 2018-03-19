@@ -8,6 +8,9 @@ import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 
+/*
+ * Nikhil Kumar
+ */
 @Rule(key = "AvoidMethodToCall")
 public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanner
 {
