@@ -1,5 +1,6 @@
 package com.sopasteria.sonar.evolansante.java.rules;
 
+import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
 import org.sonar.java.matcher.MethodMatcher;
@@ -11,7 +12,8 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 /*
  * Nikhil Kumar
  */
-@Rule(key = "AvoidMethodToCall")
+@Rule(key = "AvoidMethodToCall", name = "Specified methods of given class is not allowed in EvolanSante.", description = "Specified methods of given class is not allowed in EvolanSante.", priority = Priority.CRITICAL, tags = {
+"EvolanSante bug" })
 public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanner
 {
 
