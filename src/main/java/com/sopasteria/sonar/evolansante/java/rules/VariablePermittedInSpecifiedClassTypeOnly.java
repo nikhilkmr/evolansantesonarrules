@@ -38,6 +38,7 @@ public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor i
     @Override
     public void visitVariable(VariableTree tree)
     {
+	
         if (DEFAULT_VALUE_VARIABLE_CLASS.equals(tree.type().symbolType().fullyQualifiedName()))
         {
 
