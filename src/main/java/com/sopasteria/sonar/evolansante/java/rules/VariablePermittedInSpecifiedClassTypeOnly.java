@@ -14,7 +14,7 @@ import org.sonar.plugins.java.api.tree.VariableTree;
 public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor implements JavaFileScanner
 { 
 
-
+    
     private static final String DEFAULT_VALUE_ENCLOSED_CLASS = "org.apache.struts.action.Action";
     private static final String DEFAULT_VALUE_VARIABLE_CLASS = "org.apache.struts.action.ActionForm";
 
@@ -39,7 +39,7 @@ public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor i
     public void visitVariable(VariableTree tree)
     {
 	
-        if (DEFAULT_VALUE_VARIABLE_CLASS.equals(tree.type().symbolType().fullyQualifiedName()))
+        if (DEFAULT_VALUE_VARIABLE_CLASS.equals(tree.type().symbolType().fullyQualifiedName()) || tree.type().symbolType().isSubtypeOf(DEFAULT_VALUE_VARIABLE_CLASS))
         {
 
             ClassTree enclosedClass = tree.symbol().enclosingClass().declaration();

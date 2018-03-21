@@ -13,8 +13,9 @@ import org.sonar.plugins.java.api.tree.PackageDeclarationTree;
 @Rule(key = "DbOperationsAllowedInBusinessClassOnly", name = "Database interaction is allowed in business classonly.", description = "Database interaction is allowed in business classonly.", priority = Priority.CRITICAL, tags = { "bug" })
 public class DbOperationsAllowedInBusinessClassOnly extends BaseTreeVisitor
 	implements JavaFileScanner {
-    private static String className = "java.lang.Class";
-    private static String methodName = "getCanonicalName";
+    private static String className = "com.sopra.mutuelles.businessmodel.impl.com.ISDA";
+    private static String methodName = "recordStatement";
+
     private static String businessPackagekeyword = "business";
     private boolean isBusinessClass;
 
