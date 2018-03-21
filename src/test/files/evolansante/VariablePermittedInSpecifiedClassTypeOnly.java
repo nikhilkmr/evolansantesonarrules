@@ -7,6 +7,6 @@ public class VariablePermittedInSpecifiedClassTypeOnly  {
     
     
     ActionForm str; // Noncompliant
-     
+    Map<String, ActionForm> myMap;
 
 }

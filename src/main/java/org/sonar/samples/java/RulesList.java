@@ -25,6 +25,7 @@ import org.sonar.plugins.java.api.JavaCheck;
 
 import com.google.common.collect.ImmutableList;
 import com.sopasteria.sonar.evolansante.java.rules.AvoidMethodToCall;
+import com.sopasteria.sonar.evolansante.java.rules.DbOperationsAllowedInBusinessClassOnly;
 import com.sopasteria.sonar.evolansante.java.rules.InnerClassNotAllowed;
 import com.sopasteria.sonar.evolansante.java.rules.StaticBlockNotAllowed;
 import com.sopasteria.sonar.evolansante.java.rules.VariablePermittedInSpecifiedClassTypeOnly;
@@ -49,7 +50,7 @@ public final class RulesList {
                 //      .add(MyCustomSubscriptionRule.class)
                 //      .add(SecurityAnnotationMandatoryRule.class)
                 .add(VariablePermittedInSpecifiedClassTypeOnly.class)
-                .add(AvoidMethodToCall.class).add(InnerClassNotAllowed.class).add(StaticBlockNotAllowed.class)
+                .add(AvoidMethodToCall.class).add(InnerClassNotAllowed.class).add(StaticBlockNotAllowed.class).add(DbOperationsAllowedInBusinessClassOnly.class)
       .build();
   }
 
