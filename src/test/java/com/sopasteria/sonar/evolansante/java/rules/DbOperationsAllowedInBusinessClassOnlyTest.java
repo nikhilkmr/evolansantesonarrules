@@ -1,10 +1,9 @@
 package com.sopasteria.sonar.evolansante.java.rules;
 
-import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 public class DbOperationsAllowedInBusinessClassOnlyTest {
-    @Test
+    // @Test
     public void detected() {
 
       // Use an instance of the check under test to raise the issue.

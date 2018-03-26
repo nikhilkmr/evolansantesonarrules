@@ -12,7 +12,7 @@ import org.sonar.plugins.java.api.tree.Tree.Kind;
 import com.google.common.collect.ImmutableList;
 
 @Rule(key = "InnerClassNotAllowed", name = "Use of inner class is prohibited.", description = "Oh! boy, dont you know that use of inner class is prohibited in this project.if you are not sure how to avoid it then, talk to your team.", priority = Priority.CRITICAL, tags = {
-"bug" })
+        "bug_evolansante" })
 public class InnerClassNotAllowed extends IssuableSubscriptionVisitor {
 
     @Override

@@ -11,7 +11,7 @@ import org.sonar.plugins.java.api.tree.Tree;
 import com.google.common.collect.ImmutableList;
 
 @Rule(key = "StaticBlockNotAllowed", name = "Use of static block is prohibited.", description = "O! Man, don't you know that use of static block is prohibited in this project. If you are not sure how to avoid it then, talk to your team.", priority = Priority.CRITICAL, tags = {
-"bug" })
+        "bug_evolansante" })
 public class StaticBlockNotAllowed extends IssuableSubscriptionVisitor {
     
     @Override

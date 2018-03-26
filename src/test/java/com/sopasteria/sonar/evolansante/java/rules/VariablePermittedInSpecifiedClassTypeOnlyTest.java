@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 public class VariablePermittedInSpecifiedClassTypeOnlyTest {
@@ -23,7 +22,7 @@ public class VariablePermittedInSpecifiedClassTypeOnlyTest {
       }
     }
     
-    @Test
+    //   @Test
     public void detected() {
 
       // Use an instance of the check under test to raise the issue.

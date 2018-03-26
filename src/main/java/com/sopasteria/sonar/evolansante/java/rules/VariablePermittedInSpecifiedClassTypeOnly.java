@@ -10,7 +10,7 @@ import org.sonar.plugins.java.api.tree.ClassTree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 
 @Rule(key = "VariablePermittedInSpecifiedClassTypeOnly", name = "Specified type of variable is allowed in some specific class(es) only.", description = "Specified type of variable is allowed in some specific class(es) only.", priority = Priority.CRITICAL, tags = {
-        "bug" })
+        "bug_evolansante" })
 public class VariablePermittedInSpecifiedClassTypeOnly extends BaseTreeVisitor implements JavaFileScanner
 { 
 
