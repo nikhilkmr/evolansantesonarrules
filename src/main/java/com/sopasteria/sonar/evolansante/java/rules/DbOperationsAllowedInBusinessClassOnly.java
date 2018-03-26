@@ -3,6 +3,7 @@ package com.sopasteria.sonar.evolansante.java.rules;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.java.matcher.MethodMatcher;
+import org.sonar.java.model.PackageUtils;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
@@ -13,9 +14,11 @@ import org.sonar.plugins.java.api.tree.PackageDeclarationTree;
         "bug" })
 public class DbOperationsAllowedInBusinessClassOnly extends BaseTreeVisitor implements JavaFileScanner
 {
-    //private static String className              = "com.sopra.mutuelles.businessmodel.impl.com.ISDA";
-    private static String className              = "java.lang.Class";
-    private static String methodName             = "getName";
+    private static String className = "com.sopra.mutuelles.businessmodel.impl.com.ISDA";
+
+
+    private static String methodName = "recordStatement";
+
     private static String businessPackagekeyword = "business";
     private boolean       isBusinessClass;
 
@@ -32,16 +35,19 @@ public class DbOperationsAllowedInBusinessClassOnly extends BaseTreeVisitor impl
     @Override
     public void visitPackage(PackageDeclarationTree tree)
     {
-        if (tree.packageName().symbolType().name().contains(businessPackagekeyword))
+        String packageName = PackageUtils.packageName(tree, ".");
+        if (packageName.contains(businessPackagekeyword))
         {
             isBusinessClass = true;
         }
-        visitPackage(tree);
+        super.visitPackage(tree);
     }
 
     @Override
     public void visitMethodInvocation(MethodInvocationTree invocationTree)
     {
+        super.visitMethodInvocation(invocationTree);
+        invocationTree.symbolType();
         if (!isBusinessClass)
         {
             MethodMatcher methodToAvoid = MethodMatcher.create().typeDefinition(className).name(methodName).withAnyParameters();
@@ -51,7 +57,6 @@ public class DbOperationsAllowedInBusinessClassOnly extends BaseTreeVisitor impl
             }
         }
 
-        super.visitMethodInvocation(invocationTree);
 
     }
 

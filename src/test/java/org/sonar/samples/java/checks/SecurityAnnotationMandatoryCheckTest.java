@@ -20,7 +20,6 @@
 package org.sonar.samples.java.checks;
 
 import org.junit.Rule;
-import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
 
@@ -29,7 +28,7 @@ public class SecurityAnnotationMandatoryCheckTest {
   @Rule
   public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
 
-  @Test
+    // @Test
   public void detected() {
 
     // Use an instance of the check under test to raise the issue.
