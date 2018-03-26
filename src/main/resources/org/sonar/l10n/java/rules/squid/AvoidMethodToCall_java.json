@@ -1,0 +1,13 @@
+{
+  "title": "Title of AvoidAnnotation",
+  "type": "CRITICAL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "EvolanSante bug"
+  ],
+  "defaultSeverity": "Major"
+}

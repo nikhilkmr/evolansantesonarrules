@@ -12,8 +12,8 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 /*
  * Nikhil Kumar
  */
-@Rule(key = "AvoidMethodToCall", name = "Specified method of given class is not allowed to use.", description = "Specified method of given class is not allowed to use.", priority = Priority.CRITICAL, tags = {
-        "bug" })
+@Rule(key = "AvoidMethodToCall", name = "Specified methods of given class is not allowed in EvolanSante.", description = "Specified methods of given class is not allowed in EvolanSante.", priority = Priority.CRITICAL, tags = {
+"EvolanSante bug" })
 public class AvoidMethodToCall extends BaseTreeVisitor implements JavaFileScanner
 {
 

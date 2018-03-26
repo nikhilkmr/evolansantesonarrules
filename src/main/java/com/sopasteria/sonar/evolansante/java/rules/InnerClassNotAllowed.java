@@ -25,7 +25,7 @@ public class InnerClassNotAllowed extends IssuableSubscriptionVisitor {
     public void visitNode(Tree tree) {
 	ClassTree classTree = (ClassTree) tree;
 	if (!classTree.parent().is(Kind.COMPILATION_UNIT))
-            reportIssue(tree, "Oh! boy, dont you know that use of inner class is prohibited in this project.if you are not sure how to avoid it then, talk to your team.");
+	    reportIssue(tree, "Oh! boy, dont you know that use of inner class is prohibited in this project.if you are not sure how to avoid it then, talk to your team.");
 
     }
 }

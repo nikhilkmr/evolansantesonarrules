@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/nikhil/Desktop/esante.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
